@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Store Managment system</title>
+
+    <!--& ========== Google Fonts Links ========== -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <!--& ========== End Google Fonts Links ========== -->
+
+    <!--& ========== Fontawesome CSS Link ========== -->
+    <link rel="stylesheet" href="CSS/all.min.css" />
+    <link rel="stylesheet" href="CSS/bootstrap-icons.min.css">
+    <!--& ========== End Fontawesome CSS Link ========== -->
+
+    <!--& ========== Bootstrap CSS Link ========== -->
+    <link rel="stylesheet" href="CSS/bootstrap.min.css" />
+    <!--& ========== End Bootstrap CSS Link ========== -->
+ <link rel="stylesheet" href="CSS/bootstrap-icons.min.css">
+    <!--& ========== Main CSS Link ========== -->
+    <link rel="stylesheet" href="CSS/style.css" />
+    <!--& ========== End Main CSS Link ========== -->
+  </head>
+  <body data-bs-spy="scroll" data-bs-target="#navbar-scroll">
+   
+<section class="mt-5">
+
+  <div class="header mb-5  ">
+    <h2 class="h2 shadow m-auto p-4 border-3 rounded-3">
+<span class="text-info">E</span>LONSOL <span class="text-info">S</span>TORE
+    </h2>
+  </div>
+
+<div class="content w-75 m-auto">
+<div class="form-floating mb-3">
+  <input type="text" class="form-control   border-0 rounded-0 " id="ProductName" placeholder="name@example.com">
+  <label for="floatingInput">Product Name</label>
+</div>
+<div class="form-floating mb-3">
+  <input type="number" class="form-control   border-0 rounded-0 " id="ProductPrice" placeholder="name@example.com">
+  <label for="floatingInput">Product Price</label>
+</div>
+<div class="form-floating mb-3">
+  <select class="form-select  border-0 rounded-0  " id="ProductCategory" aria-label="Floating label select example">
+    <option selected disabled hidden>Choose Product Category</option>
+    <option value="1">Mobiles</option>
+    <option value="2">TV</option>
+    <option value="3">Labtops</option>
+  </select>
+  <label for="floatingSelect">Product Category</label>
+</div>
+
+
+<div class="form-floating mb-3">
+  <textarea class="form-control  border-0 rounded-0" placeholder="Leave a comment here" id="ProductDescription"></textarea>
+  <label for="floatingTextarea">Product Description</label>
+</div>
+
+
+<div class="form-floating mb-3">
+  <input type="file" class="form-control   border-0 rounded-0 " id="ProductImage" placeholder="name@example.com">
+  <label for="floatingInput">Product Image</label>
+</div>
+
+<button onclick="addproduct()" class="btn btn-info text-light" id="addbtn">Add Product</button>
+<button onclick="updateproduct()" class="btn btn-warning text-light d-none" id="updatebtn">Update Product</button>
+</div>
+</section>
+
+<div class="search">
+  <input type="search" oninput=" search(this)" class="form-control   w-50 mx-auto  mt-3" id="ProductName" placeholder="search by Product Name">
+ 
+</div>
+
+
+<section class="products ">
+    <div class=container>
+<div class="row g-4 " id="item">
+
+</div>
+</div>
+</section> 
+
+     <!-- ========== Bootstrap JS Link ========== -->
+    <script src="./js/bootstrap.bundle.min.js"></script>
+     <script src="./js/main.js"></script>
+    <!-- ========== End Bootstrap JS Link ========== -->
+  </body>
+</html>
