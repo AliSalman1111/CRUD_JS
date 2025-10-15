@@ -18,7 +18,8 @@ display(products)
 
 function addproduct(){
 
-console.log(ProductImage.files[0]);
+if( IsProductValid(productRegex.productname,ProductName) && IsProductValid(productRegex.productprice,ProductPrice) && IsProductimageValid() ){
+  console.log(ProductImage.files[0]);
 
     var product={
 name:ProductName.value,
@@ -41,7 +42,10 @@ display(products);
 //console.log(products);
 
 ResetAllInput();
-
+}
+else{
+  alert("enter vaild data")
+}
 }
 
 function ResetAllInput() {
@@ -53,6 +57,9 @@ function ResetAllInput() {
           ProductDescription.value="";
             ProductImage.value="";
 
+ ProductName.classList.remove("is-valid","is-invalid");
+ ProductImage.classList.remove("is-valid","is-invalid");
+  ProductPrice.classList.remove("is-valid","is-invalid");
 }
 
 
@@ -169,4 +176,57 @@ ResetAllInput();
 
 
 
+}
+
+
+
+
+
+
+
+var productRegex ={
+
+  productprice: /^[1-9][0-9]{2,6}$/,
+
+   productname: /^[A-Z][\sa-z0-9_]{2,}$/
+
+
+}
+
+function IsProductValid(regex,productInput) {
+
+  //var regex=/^[1-9][0-9]{2,6}$/;
+
+  if(  regex.test(productInput.value)  ){
+
+   productInput.classList.add("is-valid")
+  productInput.classList.remove("is-invalid")
+
+  return true;
+  }
+     else{
+
+  productInput.classList.add("is-invalid")
+  productInput.classList.remove("is-valid")
+  return false;
+    }
+}
+
+
+function IsProductimageValid() {
+
+  //var regex=/^[1-9][0-9]{2,6}$/;
+
+  if( ProductImage.files.length>0 )  {
+   
+
+
+  return true;
+  }
+     else{
+
+            alert("enter image")
+
+  return false;
+    }
 }

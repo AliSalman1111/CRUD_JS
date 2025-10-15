@@ -38,11 +38,11 @@
 
 <div class="content w-75 m-auto">
 <div class="form-floating mb-3">
-  <input type="text" class="form-control   border-0 rounded-0 " id="ProductName" placeholder="name@example.com">
+  <input type="text" oninput= "IsProductValid(productRegex.productname,this)" class="form-control   border-0 rounded-0   "  id="ProductName" placeholder="name@example.com">
   <label for="floatingInput">Product Name</label>
 </div>
 <div class="form-floating mb-3">
-  <input type="number" class="form-control   border-0 rounded-0 " id="ProductPrice" placeholder="name@example.com">
+  <input type="number" oninput= "IsProductValid(productRegex.productprice,this)" class="form-control   border-0 rounded-0 " id="ProductPrice" placeholder="name@example.com">
   <label for="floatingInput">Product Price</label>
 </div>
 <div class="form-floating mb-3">

@@ -18,3 +18,17 @@
      box-shadow: none;
      border: 2px solid darkcyan !important;
 }
+
+.form-control.is-valid , .form-control.is-valid:focus{
+box-shadow: none !important;
+border-color: rgb(11, 204, 11) !important;
+}
+
+
+
+
+
+.form-control.is-invalid, .form-control.is-invalid:focus{
+box-shadow: none !important;
+border-color:rgb(210, 29, 29)!important;
+}
